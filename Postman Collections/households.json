@@ -1,0 +1,160 @@
+{
+  "info": {
+    "_postman_id": "7e68240a-e0ae-40e4-8973-303b57f15442",
+    "name": "Mock Households",
+    "description": "# Introduction\nThis collection mocks a household\n\n# Overview\nEvery request requires a G-Token key\n\n# Authentication\nThis collection doesn't require any special authentication\n\n# Error Codes\nThe most common reason for a 403 is that the G-Token is not supplied\n\n# Rate limit\nThis API is not rate limited",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "households/1/ownedBooks",
+      "_postman_id": "8170c429-8403-438b-ac58-76ce6577bcfe",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {}
+        },
+        "url": "{{url}}/households/1/ownedBooks"
+      },
+      "response": [
+        {
+          "id": "33a7dc2d-cfdf-4a59-ae41-bee3e47ddd71",
+          "name": "Default",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{url}}/households/1/ownedBooks"
+          },
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "responseTime": null,
+          "body": ""
+        },
+        {
+          "id": "bcf3aa76-84ba-4a9c-abc4-21a0e1f92162",
+          "name": "Second Household",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {}
+            },
+            "url": "{{url}}/households/2/ownedBooks"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "[{\r\n    \"id\": 1,\r\n    \"title\": \"Don't Waste Your Life\",\r\n    \"author\": \"John Piper\"\r\n}]"
+        },
+        {
+          "id": "c9ea47b3-fa67-4e92-a769-293bde878053",
+          "name": "Third Household",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{url}}/households/1/ownedBooks"
+          },
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "responseTime": null,
+          "body": ""
+        },
+        {
+          "id": "1b26f6e5-a789-4da1-8a72-25fa26c4609f",
+          "name": "Server Error",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-mock-response-code",
+                "value": "500",
+                "type": "text"
+              }
+            ],
+            "url": "{{url}}/households/1/ownedBooks"
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "responseTime": null,
+          "body": ""
+        },
+        {
+          "id": "f98cdbb0-d954-4c07-8918-3f1df15fb494",
+          "name": "Example Household",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": "{{url}}/households/4/ownedBooks"
+          },
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "responseTime": null,
+          "body": "[{\r\n    \"id\": 1,\r\n    \"title\": \"Don't Waste Your Life\",\r\n    \"author\": \"John Piper\"\r\n}]"
+        }
+      ]
+    },
+    {
+      "name": "Get Households",
+      "_postman_id": "2d72c283-b356-47b1-9de6-e410d07a685a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{url}}/households"
+      },
+      "response": [
+        {
+          "id": "26e4d886-a47d-4a84-abdb-4d8128bc1ba7",
+          "name": "Get Households",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": "{{url}}/households"
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "responseTime": null,
+          "body": null
+        }
+      ]
+    }
+  ]
+}
